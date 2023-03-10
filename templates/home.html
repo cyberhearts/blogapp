@@ -6,7 +6,8 @@
 <h1>Hello</h1>
 <ul>
     {% for post in object_list %}
-    <li>{{ post }}</li>
+    <li><a href="{% url 'postPage' post.pk %}">{{ post.title }}</a></li>
+    <p>{{ post.body }}</p>
     {% endfor %}
 </ul>
 {% endblock %}
